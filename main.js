@@ -1,28 +1,45 @@
 const memoryCards = document.querySelectorAll('.memorycard');
 memoryCards.forEach(card => card.addEventListener('click', flipCard));
 
-function flipCard() {
-    if(this.classList.contains('flip')){                 
-        this.classList.remove('flip');
-    }else{
-        this.classList.add('flip');
-    }
 
-    if(this.classList.contains('rotate')){
-        this.classList.remove('rotate');
-    }else{
-        this.classList.add('rotate');
-    }
+function flipCard() {
+    this.classList.toggle('rotate');
+    this.classList.toggle('flip');
+    
 }
 
-/* the same thing 
+(function shuffle(){
+    memoryCards.forEach(card => {                    /*every '.memorycard' will be placed in the parameter card */
+        let random = Math.floor(Math.random() * 16)
+        card.style.order = random
+    })
+}());
 
- function flipCard() {
-     this.classList.toggle('flip');
-     this.classList.toggle('rotate');
- }
 
- the same thing */
+
+(function checkforMatch () {
+let previousCard = null;
+memoryCards.forEach(function(card) {
+  card.addEventListener("click", function() {
+    
+    let currentCard = card.querySelector("img").src;
+    if (previousCard !== null) {
+      if (currentCard === previousCard) {
+        console.log("Images are the same");
+      } else {
+        console.log("Images are different");
+      }
+    }
+    previousCard = currentCard;
+  });
+});
+} ())
+
+
+
+
+
+
 
 
 
