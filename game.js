@@ -24,6 +24,9 @@ function checkForMatch() {
     matchedCards.push(flippedCards[0]);
     matchedCards.push(flippedCards[1]);
     */
+    flippedCards[0].removeEventListener("click", flipCard);
+    flippedCards[1].removeEventListener("click", flipCard);
+    /* removing the click event listener from the matched cards to prevent them from being clicked again.  */
     flippedCards = [];
   } else {
     setTimeout(resetCards, 1000);
