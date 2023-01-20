@@ -73,3 +73,8 @@ body {
         transform: rotateY(0deg);
     }
 }
+
+.memorycard.disabled {
+    pointer-events: none;
+}
+
