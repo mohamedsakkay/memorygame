@@ -14,7 +14,7 @@ body {
     width: 75%;
     margin-left: 19%;
     margin-right: auto;   
-    margin-top: 2%;
+    margin-top: 4%;
     margin-bottom: 2%;
 }
 .memorycard {
@@ -50,7 +50,6 @@ body {
 
 .card-back {
     background-color: #eee;
-    transform: rotateY(180deg);
 }
 
 .flip .card-back {
@@ -78,3 +77,74 @@ body {
     pointer-events: none;
 }
 
+.settings {
+    display: flex;
+}
+.match-counter {
+    position: relative;
+    top: 30px;
+    left : 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    background-color: #ccc;
+    padding: 5px 16px 4px 16px;
+    border-radius: 30px;
+  }
+  
+.time-left {
+    position: relative;
+    top: 30px;
+    left : 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    background-color: #ccc;
+    padding: 5px 16px 4px 16px;
+    border-radius: 30px;
+    margin-left: 10px;
+}
+
+.btn{
+    position: relative;
+    top: 30px;
+    left : 20px;
+    margin-left: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333333;
+    background-color: #ccc;
+    padding: 5px 16px 4px 16px;
+    border-radius: 30px;
+    border-color: yellow;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display:none;
+}
+
+.btn:hover {
+    border-color: yellowgreen;
+    background-color: yellow;
+    color: darkblue;
+  }
+
+.btn:active {
+    background-color: red;     /*when it's clicked*/
+}
+
+.btn.show {
+    display: block;
+}
+
+.win {
+    background-color: yellow;
+    color: rgb(122, 119, 119);
+    font-weight: bold;
+    text-align: center;
+    display: none;
+  }
+  
+.win.show {
+    display: block;
+  }
+  
